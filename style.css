@@ -12,6 +12,7 @@ html{
 
 body {
 	height: 100%;
+    background-color: #000000;
     background-image: url(./assets/bg.svg);
     background-size:100% 100%;
     -o-background-size: 100% 100%;
@@ -128,6 +129,18 @@ body {
     transition: 0.5s;
   }
 
+
+  @media screen and (max-width: 992px) {
+    .menu-item{
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.5s;
+    }
+  }
+
+
+
   .menu-item:hover{
     transform: translateX(15px);
     color: #008cff;
@@ -144,7 +157,5 @@ body {
   }
 
   .services-card{
-    margin: 10px;
-    padding: 100px;
     background-color: rgba(0, 0, 0, 0.098);
   }
