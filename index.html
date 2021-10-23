@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
 
@@ -35,11 +36,10 @@
 </head>
 
 <body>
-
     <div class="w-full h-full border-l-8 border-blue-600" id="ms-menu">
 
         <div class="inline-flex justify-between w-full md:px-40 lg:px-80 px-10 sm:py-14 py-6 items-center">
-            <div class="inline-flex items-center" data-aos="fade-right">
+            <div class="inline-flex items-center">
                 <h1 class="sm:text-4xl text-xl font-light">Manthan Sutar</h1>
             </div>
             <i class="fas fa-times sm:text-5xl text-xl cursor-pointer" id="menu-btn-close"></i>
@@ -56,7 +56,7 @@
     <div id="scroll-percentage" class="h-2 themeColorBg fixed sm:block hidden"></div>
 
     <header>
-        <div class="inline-flex justify-between w-full md:px-40 lg:px-80 px-10 sm:py-14 py-6 items-center">
+        <div class="inline-flex justify-between w-full md:px-40 lg:px-80 px-10 sm:py-14 py-6 items-center animate__animated animate__fadeIn">
             <div class="inline-flex items-center">
                 <!-- <img src="./assets/avatar.png" class="h-16 pr-4" alt=""> -->
                 <h1 class="sm:text-4xl text-xl font-light">Manthan Sutar</h1>
@@ -67,9 +67,9 @@
 
     <div class="w-full justify-center inline-flex sm:py-52 py-40">
         <div class="text-center">
-            <h1 class="font-light sm:text-3xl text-xl text-gray-200 mb-10 tracking-widest">I'M FROM INDIA</h1>
+            <h1 class="font-light sm:text-3xl text-xl text-gray-200 mb-10 tracking-widest animate__animated animate__fadeInUp">I'M FROM INDIA</h1>
             <h1 class="font-semibold sm:text-7xl sm:tracking-widest text-5xl">A <span
-                    class="themeColorText">SOFTWARE</span> DEVELOPER</h1>
+                    class="themeColorText animate__animated animate__fadeInRight">SOFTWARE</span> DEVELOPER</h1>
         </div>
     </div>
 
@@ -129,9 +129,5 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 <script src="./script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 
 </html>
