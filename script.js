@@ -29,9 +29,7 @@ $(document).ready(function () {
 
 
 function buildComponents(){
-    jQuery.get('http://localhost/manthansutar.in/components/menu.js', function(data) {
-        alert(data);
-    });
+
 }
 
 
