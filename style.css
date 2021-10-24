@@ -49,14 +49,14 @@ body {
 
   @media screen and (max-width: 992px) {
     .menu-item{
-      font-size: 1rem;
+      font-size: 2rem;
       cursor: pointer;
       font-weight: 600;
       transition: 0.5s;
     }
   }
 
-  
+
   .menu-item:hover{
     transform: translateX(15px);
     color: #008cff;
