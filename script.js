@@ -1,9 +1,7 @@
 
-
 $(document).ready(function () {
-
+    buildComponents()
     // loadServicesAnimations()
-
     $(window).scroll(function (e) {
         var scrollTop = $(window).scrollTop();
         var docHeight = $(document).height();
@@ -26,10 +24,15 @@ $(document).ready(function () {
             top: (($(window).height() - $('#scrollPercentLabel').outerHeight()) / 2) - $('#scrollPercentLabel').height()
         });
     }
-
     repositionLabel();
 });
 
+
+function buildComponents(){
+    jQuery.get('http://localhost/manthansutar.in/components/menu.js', function(data) {
+        alert(data);
+    });
+}
 
 
 
