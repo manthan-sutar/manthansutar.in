@@ -1,6 +1,4 @@
-
 $(document).ready(function () {
-    buildComponents()
     // loadServicesAnimations()
     $(window).scroll(function (e) {
         var scrollTop = $(window).scrollTop();
@@ -46,20 +44,15 @@ resumeViewBtnMenu.click(showResume)
 resumeViewBtnClose.click(closeResumeViewer)
 
 
-
-
-
 function initState(){
-    menuView.hide()
-    resumeView.hide()
+    // menuView.hide()
+    // resumeView.hide()
 }
 
 initState();
 
 //Function
 function openMenu() {
-    menuView.show()
-    menuButton.hide()
     $(menuView).css({
         'transform': 'translateX(0%)scale(1)',
         'border-radius': '0%'
@@ -68,7 +61,6 @@ function openMenu() {
 }
 
 function closeMenu() {
-    menuButton.show()
     $(menuView).css({
         'transform': 'translateX(-100%)scale(0.1)',
         'border-radius': '20%'
@@ -77,9 +69,6 @@ function closeMenu() {
         'overflow-x': 'hidden',
         'overflow-y': 'scroll',
     });
-    setTimeout(function(){
-        menuView.hide()
-    }, 1000)
 }
 
 function showResume(){
@@ -101,7 +90,4 @@ function closeResumeViewer(){
         'overflow-x': 'hidden',
         'overflow-y': 'scroll',
     });
-    setTimeout(function(){
-        resumeView.hide()
-    }, 1000)
 }
