@@ -45,14 +45,41 @@ resumeViewBtnClose.click(closeResumeViewer)
 
 
 function initState(){
-    // menuView.hide()
-    // resumeView.hide()
+    menuView.hide()
+    resumeView.hide()
 }
+
+
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
 initState();
 
+
+
+
 //Function
 function openMenu() {
+    menuView.show()
     $(menuView).css({
         'transform': 'translateX(0%)scale(1)',
         'border-radius': '0%'
@@ -72,12 +99,16 @@ function closeMenu() {
 }
 
 function showResume(){
-    resumeView.show()
-    $(resumeView).css({
-        'transform': 'translateX(0%)scale(1)',
-        'border-radius': '0%'
-    });
-    $('body').css('overflow', 'hidden');
+    if(isMobile.any()){
+        window.location.href = './database/Manthan Sutar - Resume.pdf';
+    }else{
+        resumeView.show()
+        $(resumeView).css({
+            'transform': 'translateX(0%)scale(1)',
+            'border-radius': '0%'
+        });
+        $('body').css('overflow', 'hidden');
+    }
 }
 
 
