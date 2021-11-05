@@ -34,6 +34,9 @@ const resumeViewBtn = $("#resume-view-btn")
 const resumeViewBtnMenu = $("#resume-view-btn-menu")
 const resumeViewBtnClose = $("#resume-view-btn-close")
 const scrollPercentElement = $("#scroll-percentage")
+
+const serviceLink = $("#services-link");
+
 //Events
 
 
@@ -42,6 +45,8 @@ menuButtonClose.click(closeMenu)
 resumeViewBtn.click(showResume)
 resumeViewBtnMenu.click(showResume)
 resumeViewBtnClose.click(closeResumeViewer)
+
+serviceLink.click(showServices)
 
 
 function initState(){
@@ -97,6 +102,18 @@ function closeMenu() {
         'overflow-y': 'scroll',
     });
 }
+
+
+
+function showServices(){
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#services-section").offset().top
+    }, 500);
+    closeMenu()
+}
+
+
+
 
 function showResume(){
     if(isMobile.any()){
