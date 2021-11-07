@@ -34,10 +34,15 @@ const resumeViewBtn = $("#resume-view-btn")
 const resumeViewBtnMenu = $("#resume-view-btn-menu")
 const resumeViewBtnClose = $("#resume-view-btn-close")
 const scrollPercentElement = $("#scroll-percentage")
+const sendEmailButton = $("#send-email-btn")
+
 
 const serviceLink = $("#services-link");
 
 //Events
+
+
+sendEmailButton.click(sendEmail)
 
 
 menuButton.click(openMenu);
@@ -113,7 +118,20 @@ function showServices(){
 }
 
 
-
+//index.js  
+function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "Manthansutar99@gmail.com",
+	Password : "7066604884",
+	To : 'Manthansutar99@gmail.com',
+	From : "teamhaztech@gmail.com",
+	Subject : "Sending Email using javascript - manthansutar.in",
+	Body : "Hello World!!",
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
 
 function showResume(){
     if(isMobile.any()){
@@ -139,3 +157,5 @@ function closeResumeViewer(){
         'overflow-y': 'scroll',
     });
 }
+
+
