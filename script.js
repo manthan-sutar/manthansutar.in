@@ -44,7 +44,6 @@ const serviceLink = $("#services-link");
 
 sendEmailButton.click(sendEmail)
 
-
 menuButton.click(openMenu);
 menuButtonClose.click(closeMenu)
 resumeViewBtn.click(showResume)
@@ -87,6 +86,11 @@ initState();
 
 
 
+
+
+
+
+
 //Function
 function openMenu() {
     menuView.show()
@@ -124,7 +128,7 @@ function sendEmail() {
 	Host: "smtp.gmail.com",
 	Username : "Manthansutar99@gmail.com",
 	Password : "7066604884",
-	To : 'Manthansutar99@gmail.com',
+	To : newLocal,
 	From : "teamhaztech@gmail.com",
 	Subject : "Sending Email using javascript - manthansutar.in",
 	Body : "Hello World!!",

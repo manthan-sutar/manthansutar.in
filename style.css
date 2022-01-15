@@ -57,7 +57,6 @@ body {
     }
   }
 
-
   .menu-item:hover{
     transform: translateX(15px);
     color: #008cff;
